@@ -1,0 +1,33 @@
+live_config_reload: true
+
+window:
+  opacity: 0.90
+  padding:
+    x: 18
+    y: 16
+  dynamic_padding: false
+  decorations: buttonless
+
+font:
+  normal:
+    family: "Fantasque Sans Mono"
+    style: Regular
+  size: 18.0
+
+font:
+  normal:
+    family: "SFMono Nerd Font"
+    style: Medium
+  italic:
+    family: "SFMono Nerd Font"
+    style: Medium Italic
+  bold:
+    family: "SFMono Nerd Font"
+    style: Heavy
+  bold_italic:
+    family: "SFMono Nerd Font"
+    style: Heavy Italic
+  size: 17.0
+
+key_bindings:
+  - { key: G, mods: Command, chars: "\x02g" }

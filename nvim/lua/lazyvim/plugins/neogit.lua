@@ -9,5 +9,6 @@ return {
     integrations = {
       diffview = true,
     },
+    kind = "split",
   },
 }

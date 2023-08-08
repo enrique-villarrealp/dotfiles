@@ -19,12 +19,6 @@ end
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
--- Move to window using the <ctrl> hjkl keys
-map("n", "<C-h>", "<C-w>h", { desc = "Go to left window", remap = true })
-map("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", remap = true })
-map("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
-map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
-
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
@@ -132,17 +126,14 @@ map("n", "<leader>L", Util.changelog, {desc = "LazyVim Changelog"})
 
 -- floating terminal
 local lazyterm = function() Util.float_term(nil, { cwd = Util.get_root() }) end
-map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
+map("n", "<C-j>", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
+map("t", "<C-j>", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
 map("n", "<leader>fT", function() Util.float_term() end, { desc = "Terminal (cwd)" })
 map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
 map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
 -- Terminal Mappings
 map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
-map("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
-map("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Go to lower window" })
-map("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Go to upper window" })
-map("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Go to right window" })
 map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 map("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
 
@@ -153,6 +144,10 @@ map("n", "<leader>w-", "<C-W>s", { desc = "Split window below", remap = true })
 map("n", "<leader>w|", "<C-W>v", { desc = "Split window right", remap = true })
 map("n", "<leader>-", "<C-W>s", { desc = "Split window below", remap = true })
 map("n", "<leader>/", "<C-W>v", { desc = "Split window right", remap = true })
+map("n", "<leader>wh", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
+map("n", "<leader>wj", "<cmd>wincmd j<cr>", { desc = "Go to lower window" })
+map("n", "<leader>wk", "<cmd>wincmd k<cr>", { desc = "Go to upper window" })
+map("n", "<leader>wl", "<cmd>wincmd l<cr>", { desc = "Go to right window" })
 
 -- tabs
 map("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
@@ -163,7 +158,6 @@ map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
 -- Neogit
-map("n", "<leader>gb", "<cmd>Neogit branch<cr>", { desc = "Neogit Branch" })
 map("n", "<leader>gs", "<cmd>Neogit<cr>", { desc = "Neogit Status" })
 map("n", "<leader>gp", "<cmd>Neogit pull<cr>", { desc = "Neogit Pull" })
 map("n", "<leader>gP", "<cmd>Neogit push<cr>", { desc = "Neogit Push" })

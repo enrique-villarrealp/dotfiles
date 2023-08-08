@@ -1,7 +1,7 @@
 live_config_reload: true
 
 window:
-  opacity: 0.91
+  opacity: 0.90
   padding:
     x: 18
     y: 16
@@ -31,7 +31,7 @@ font:
 
 key_bindings:
   # t - smart tmux session manager
-  - { key: J, mods: Command, chars: "\x02\x54" }
+  - { key: K, mods: Command, chars: "\x02\x54" }
 
   # Move pane Up, Down, Left, Right
   - { key: K, mods: Command|Shift, chars: "\x02\x1b\x5b\x41" }

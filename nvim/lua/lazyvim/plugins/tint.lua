@@ -4,7 +4,7 @@ return {
     require("tint").setup({
       tint = -70,
       saturation = 0.6,
-      highlight_ignore_patterns = { "Flash*" },
+      highlight_ignore_patterns = { "Flash*", "Comment" },
     })
   end,
 }

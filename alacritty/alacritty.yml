@@ -1,7 +1,7 @@
 live_config_reload: true
 
 window:
-  opacity: 0.87
+  opacity: 1
   padding:
     x: 18
     y: 16
@@ -23,8 +23,14 @@ font:
   bold_italic:
     family: "FantasqueSansM Nerd Font Mono" 
     style: Heavy Italic
-  size: 18.0
+  offset:
+    x: 0
+    y: 1
+  size: 19.5
 
+
+# Useful Hex Codes
+# \x02 - control-b (default tmux prefix)
 key_bindings:
   # t - smart tmux session manager
   - { key: K, mods: Command, chars: "\x02\x54" }
@@ -35,9 +41,11 @@ key_bindings:
   - { key: H, mods: Command|Shift, chars: "\x02\x1b\x5b\x44" }
   - { key: L, mods: Command|Shift, chars: "\x02\x1b\x5b\x43" }
 
-
-
-
+  #
+  # Move to previous window
+  - { key: Comma, mods: Command, chars: "\x02n" }
+  # Move to next window
+  - { key: Period, mods: Command, chars: "\x02p" }
   # Create a new tmux window
   - { key: T, mods: Command, chars: "\x02\x63" }
   # Kill current window / pane
@@ -46,3 +54,42 @@ key_bindings:
   - { key: E, mods: Command, chars: "\x02\"" }
   # Split pane vertically
   - { key: E, mods: Command|Shift, chars: "\x02%" }
+
+
+
+  # Tokyo Night Storm
+
+  # TokyoNight Alacritty Colors
+colors:
+  # Default colors
+  primary:
+    background: '0x24283b'
+    foreground: '0xc0caf5'
+
+  # Normal colors
+  normal:
+    black:   '0x1d202f'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
+
+  # Bright colors
+  bright:
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
+    
+

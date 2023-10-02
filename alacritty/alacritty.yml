@@ -9,24 +9,21 @@ window:
   decorations: buttonless
 
 
+# Font Configs
 font:
   normal:
-    #family: "SFMono Nerd Font"
-    family: "FantasqueSansM Nerd Font Mono"
-    style: Regular
+    family: "CaskaydiaCove Nerd Font"
+    style: SemiLight
   italic:
-    family: "FantasqueSansM Nerd Font Mono"
-    style: Italic
+    style: SemiLight Italic
   bold:
-    family: "FantasqueSansM Nerd Font Mono"
-    style: Heavy
+    style: SemiBold
   bold_italic:
-    family: "FantasqueSansM Nerd Font Mono" 
-    style: Heavy Italic
+    style: SemiBold Italic
   offset:
     x: 0
     y: 1
-  size: 19.5
+  size: 18.5
 
 
 # Useful Hex Codes
@@ -91,5 +88,3 @@ colors:
   indexed_colors:
     - { index: 16, color: '0xff9e64' }
     - { index: 17, color: '0xdb4b4b' }
-    
-

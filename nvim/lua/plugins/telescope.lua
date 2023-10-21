@@ -30,8 +30,9 @@ local config = function()
         previewer = false,
       }
     },
-  }
-  )
+  })
+  
+  require("telescope").load_extension("advanced_git_search")
 
 end
 
@@ -39,6 +40,12 @@ return {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.3",
   lazy = false,
-  dependencies = { "nvim-lua/plenary.nvim"},
+  dependencies = { 
+    "nvim-lua/plenary.nvim",
+      { 
+        "nvim-telescope/telescope-live-grep-args.nvim" ,
+        version = "^1.0.0",
+    },
+  },
   config = config
 }

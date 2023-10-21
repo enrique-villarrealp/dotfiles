@@ -3,9 +3,6 @@ local keymap = vim.keymap
 local builtin = require("telescope.builtin")
 local utils = require("telescope.utils")
 
--- Generic
-keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
-
 -- Oil Nvim
 keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
 
@@ -27,8 +24,8 @@ keymap.set("v", "<", "<gv")
 keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 keymap.set("n", "<leader>fF", function() builtin.find_files({ cwd = utils.buffer_dir() }) end, { desc = "Find files (cwd)" })
-keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Grep" })
-keymap.set("n", "<leader>fG", function() builtin.live_grep({ cwd = utils.buffer_dir() }) end, { desc = "Grep (cwd)" })
+keymap.set("n", "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { desc = "Grep" })
+--keymap.set("n", "<leader>fG", function() builtin.live_grep({ cwd = utils.buffer_dir() }) end, { desc = "Grep (cwd)" })
 keymap.set("n", "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Find in Buffer" })
 
 -- Git
@@ -36,6 +33,7 @@ keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Branc
 keymap.set("n", "<leader>gs", "<cmd>Neogit<cr>", { desc = "Neogit Status" })
 keymap.set("n", "<leader>gp", "<cmd>Neogit pull<cr>", { desc = "Neogit Pull" })
 keymap.set("n", "<leader>gP", "<cmd>Neogit push<cr>", { desc = "Neogit Push" })
+keymap.set("n", "<leader>gi", "<cmd>AdvancedGitSearch<cr>", { desc = "Advanced Git Search" })
 
 -- Buffers
 keymap.set("n", "<leader>,", "<cmd>Telescope buffers<cr>", { desc = "List buffers" })

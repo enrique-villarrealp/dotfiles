@@ -71,7 +71,7 @@ opt.hlsearch = false
 -- Appearance
 opt.relativenumber = true
 opt.termguicolors = true
-opt.colorcolumn = "90"
+opt.colorcolumn = "80"
 opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10

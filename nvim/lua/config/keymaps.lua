@@ -20,13 +20,17 @@ keymap.set("n", "<leader>wl", "<cmd>wincmd l<cr>", { desc = "Go to right window"
 keymap.set("v", ">", ">gv")
 keymap.set("v", "<", "<gv")
 
--- Telescope
+-- Finding files
 keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+keymap.set("n", "<C-p>", "<cmd>Telescope git_files<cr>", { desc = "Find files" })
 keymap.set("n", "<leader>fF", function() builtin.find_files({ cwd = utils.buffer_dir() }) end, { desc = "Find files (cwd)" })
-keymap.set("n", "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { desc = "Grep" })
---keymap.set("n", "<leader>fG", function() builtin.live_grep({ cwd = utils.buffer_dir() }) end, { desc = "Grep (cwd)" })
+
+-- Search
+keymap.set("n", "<leader>sg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { desc = "Grep" })
+keymap.set("n", "<leader>gG", function() builtin.live_grep({ cwd = utils.buffer_dir() }) end, { desc = "Grep (cwd)" })
 keymap.set("n", "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Find in Buffer" })
+keymap.set("n", "<leader>sr", function() require("spectre").open() end, { desc = "Replace in files (spectre)" })
 
 -- Git
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Branches" })
@@ -44,14 +48,14 @@ keymap.set("n", "<leader>bP", "<cmd>BufferLineGroupClose ungrouped<cr>", { desc 
 
 -- LSP Stuff
 keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<cr>", { desc = "Code actions" })
-keymap.set("n", "<leader>lr", "<cmd>Lspsaga finder<cr>", { desc = "Find references" })
-keymap.set("n", "<leader>ld", "<cmd>Lspsaga peek_definition<cr>", { desc = "Peek definition" })
-keymap.set("n", "<leader>lD", "<cmd>Lspsaga goto_definition<cr>", { desc = "Go to definition" })
+keymap.set("n", "<leader>fr", "<cmd>Lspsaga finder<cr>", { desc = "Find references" })
+keymap.set("n", "<leader>fd", "<cmd>Lspsaga peek_definition<cr>", { desc = "Peek definition" })
+keymap.set("n", "<leader>fD", "<cmd>Lspsaga goto_definition<cr>", { desc = "Go to definition" })
 keymap.set("n", "<leader>ln", "<cmd>Lspsaga rename<cr>", { desc = "Rename symbol" })
 keymap.set("n", "K", "<cmd>Lspsaga hover_doc<cr>", { desc = "Show documentation" })
-keymap.set("n", "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "Find symbols in file" })
-keymap.set("n", "<leader>lS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", { desc = "Find symbols in workspace" })
-
+keymap.set("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "Find symbols in file" })
+keymap.set("n", "<C-t>", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", { desc = "Find symbols in workspace" })
+keymap.set("n", "<leader>fS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", { desc = "Find symbols in workspace" })
 
 -- Harpoon
 keymap.set("n", "<leader>'", "<cmd>lua require('harpoon.mark').add_file()<cr>", { desc = "Add to Harpoon" })
@@ -65,3 +69,6 @@ keymap.set("n", "<leader>6", "<cmd>lua require('harpoon.ui').nav_file(6)<cr>", {
 keymap.set("n", "<leader>7", "<cmd>lua require('harpoon.ui').nav_file(7)<cr>", { desc = "Harpoon Buffer 7" })
 keymap.set("n", "<leader>8", "<cmd>lua require('harpoon.ui').nav_file(8)<cr>", { desc = "Harpoon Buffer 8" })
 keymap.set("n", "<leader>9", "<cmd>lua require('harpoon.ui').nav_file(9)<cr>", { desc = "Harpoon Buffer 9" })
+
+-- Zen Mode
+keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "Toggle Zen Mode" })

@@ -33,6 +33,7 @@ local config = function()
   })
   
   require("telescope").load_extension("advanced_git_search")
+  require("telescope").load_extension("harpoon")
 
 end
 

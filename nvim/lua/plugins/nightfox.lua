@@ -7,6 +7,7 @@ return {
         groups = {
             all = {
               Substitute = { fg = "palette.white" },
+              InclineNormal = { fg = "#192330", bg = "#cdcecf" },
             },
           }
       })

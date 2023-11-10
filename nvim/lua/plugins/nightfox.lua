@@ -8,6 +8,7 @@ return {
             all = {
               Substitute = { fg = "palette.white" },
               InclineNormal = { fg = "#192330", bg = "#cdcecf" },
+              DropBarCurrentContext = { fg = "palette.white"},
             },
           }
       })

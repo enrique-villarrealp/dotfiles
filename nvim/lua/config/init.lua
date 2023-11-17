@@ -15,29 +15,29 @@ require("config.globals")
 require("config.autocmds")
 
 local opts = {
-	defaults = {
-		lazy = true,
-	},
+  defaults = {
+    lazy = true,
+  },
 
-	install = {
-		colorscheme = { "nightfox"}
-	},
+  install = {
+    colorscheme = { "nightfox"}
+  },
 
-	rtp = {
-		disabled_plugins = {
-			"gzip",
-			"matchit",
-			"matchparen",
-			"netrwPlugin",
-			"tarPlugin",
-			"tohtml",
-			"tutor",
-			"zipPlugin",
-		}
-	},
-	change_detection = {
-		notify = true,
-	}
+  rtp = {
+    disabled_plugins = {
+      "gzip",
+      "matchit",
+      "matchparen",
+      "netrwPlugin",
+      "tarPlugin",
+      "tohtml",
+      "tutor",
+      "zipPlugin",
+    }
+  },
+  change_detection = {
+    notify = true,
+  }
 }
 
 require("lazy").setup('plugins', opts)

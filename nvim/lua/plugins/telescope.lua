@@ -2,13 +2,14 @@ local keymap = vim.keymap
 
 local config = function()
   local telescope = require("telescope")
+  local actions = require("telescope.actions")
 
   telescope.setup({
     defaults = {
       mappings = {
         i = {
           ["<C-j>"] = "move_selection_next",
-          ["<C-k>"] = "move_selection_previous",
+          ["<C-k>"] = "move_selection_previous"
         },
       },
     },
@@ -18,13 +19,30 @@ local config = function()
         theme = "dropdown",
         previewer = false,
         hidden = true,
+        mappings = {
+          i = {
+            -- These are Opt-? and Opt-- respectively
+            -- I will not be using these in mnemonics in raycast
+            ["÷"] = actions.select_vertical,
+            ["æ"] = actions.select_horizontal
+          },
+          n = {
+            ["/"] = actions.select_vertical,
+            ["-"] = actions.select_horizontal
+          },
+        },
       },
-
       live_grep = {
         theme = "dropdown",
         previewer = true,
       },
-
+      git_branches = {
+        mappings = {
+          i = {
+            ["C-S-m"] = actions.git_merge_branch,
+          }
+        }
+      },
       buffers = {
         theme = "dropdown",
         previewer = false,

@@ -51,6 +51,8 @@ key_bindings:
   - { key: E, mods: Command, chars: "\x02\"" }
   # Split pane vertically
   - { key: E, mods: Command|Shift, chars: "\x02%" }
+  # Open Gh-dash in new window
+  - { key: G, mods: Command, chars: "\x02G" }
 
 
 

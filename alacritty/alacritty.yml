@@ -10,20 +10,39 @@ window:
 
 
 # Font Configs
+# font:
+#   normal:
+#     family: "CaskaydiaCove Nerd Font"
+#     style: SemiLight
+#   italic:
+#     family: "Maple Mono"
+#     weight: Light
+#     style: Italic
+#   bold:
+#     style: SemiBold
+#   bold_italic:
+#     style: SemiBold Italic
+#   offset:
+#     x: 0
+#     y: 1
+#   size: 16
+  
 font:
   normal:
-    family: "CaskaydiaCove Nerd Font"
-    style: SemiLight
+    family: "JetBrainsMonoNL Nerd Font"
+    style: Medium
   italic:
-    style: SemiLight Italic
+    family: "Maple Mono"
+    weight: Light
+    style: Italic
   bold:
-    style: SemiBold
+    style: Bold
   bold_italic:
-    style: SemiBold Italic
+    style: Medium Italic
   offset:
     x: 0
     y: 1
-  size: 18.5
+  size: 16
 
 
 # Useful Hex Codes
@@ -62,28 +81,28 @@ key_bindings:
 colors:
   # Default colors
   primary:
-    background: '0x192330'
-    foreground: '0xcdcecf'
+    background: '0x232136'
+    foreground: '0xe0def4'
   # Normal colors
   normal:
-    black:   '0x393b44'
-    red:     '0xc94f6d'
-    green:   '0x81b29a'
-    yellow:  '0xdbc074'
-    blue:    '0x719cd6'
-    magenta: '0x9d79d6'
-    cyan:    '0x63cdcf'
-    white:   '0xdfdfe0'
+    black:   '0x393552'
+    red:     '0xeb6f92'
+    green:   '0xa3be8c'
+    yellow:  '0xf6c177'
+    blue:    '0x569fba'
+    magenta: '0xc4a7e7'
+    cyan:    '0x9ccfd8'
+    white:   '0xe0def4'
   # Bright colors
   bright:
-    black:   '0x575860'
-    red:     '0xd16983'
-    green:   '0x8ebaa4'
-    yellow:  '0xe0c989'
-    blue:    '0x86abdc'
-    magenta: '0xbaa1e2'
-    cyan:    '0x7ad5d6'
-    white:   '0xe4e4e5'
+    black:   '0x47407d'
+    red:     '0xf083a2'
+    green:   '0xb1d196'
+    yellow:  '0xf9cb8c'
+    blue:    '0x65b1cd'
+    magenta: '0xccb1ed'
+    cyan:    '0xa6dae3'
+    white:   '0xe2e0f7'
   indexed_colors:
-    - { index: 16, color: '0xf4a261' }
-    - { index: 17, color: '0xd67ad2' }
+    - { index: 16, color: '0xea9a97' }
+    - { index: 17, color: '0xeb98c3' }

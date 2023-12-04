@@ -1,5 +1,5 @@
 local config = function ()
-  local theme = require("lualine.themes.nord")
+  local theme = require("lualine.themes.dracula")
 
   theme.normal.c.bg = nil
 

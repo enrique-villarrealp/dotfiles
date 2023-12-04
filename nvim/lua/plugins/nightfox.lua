@@ -4,15 +4,20 @@ return {
     priority = 1000,
     config = function()
       require("nightfox").setup({
-        groups = {
-            all = {
-              Substitute = { fg = "palette.white" },
-              InclineNormal = { fg = "#192330", bg = "#cdcecf" },
-              DropBarCurrentContext = { fg = "palette.white"},
+        options = {
+          groups = {
+              all = {
+                Substitute = { fg = "palette.white" },
+                InclineNormal = { fg = "#192330", bg = "#cdcecf" },
+                DropBarCurrentContext = { fg = "palette.white"},
+              },
             },
-          }
+          styles = {
+              comments = "italic"
+          },
+        }
       })
 
-      vim.cmd('colorscheme nightfox')
+      vim.cmd('colorscheme duskfox')
     end
 }

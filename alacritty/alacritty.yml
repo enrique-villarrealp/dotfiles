@@ -29,7 +29,8 @@ window:
   
 font:
   normal:
-    family: "JetBrainsMonoNL Nerd Font"
+    # family: "JetBrainsMonoNL Nerd Font"
+    family: "CommitMono Nerd Font"
     style: Medium
   italic:
     family: "Maple Mono"

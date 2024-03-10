@@ -92,6 +92,8 @@ local config = function()
       },
     },
   })
+
+  vim.diagnostic.config({underline = false})
 end
 
 return {

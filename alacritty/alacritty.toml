@@ -1,0 +1,139 @@
+live_config_reload = true
+
+[[colors.indexed_colors]]
+color = "0xea9a97"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xeb98c3"
+index = 17
+
+[colors.bright]
+black = "#333333"
+blue = "#71aed7"
+cyan = "#47BEA9"
+green = "#95cb82"
+magenta = "#cc8bc9"
+red = "#c33c33"
+white = "#ffffff"
+yellow = "#dfdf8e"
+
+[colors.selection]
+text = "#000000"
+background = "#293334"
+
+[colors.normal]
+black = "#000000"
+blue = "#217EBC"
+cyan = "#178F79"
+green = "#6abf40"
+magenta = "#9B3596"
+red = "#d2322d"
+white = "#cecece"
+yellow = "#cd974b"
+
+[colors.primary]
+background = "#0e1415"
+foreground = "#cecece"
+
+[font]
+size = 16
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Medium Italic"
+
+[font.italic]
+family = "Maple Mono"
+style = "Italic"
+
+[font.normal]
+# family = "JetBrainsMonoNL Nerd Font"
+family = "CommitMono Nerd Font"
+
+[font.offset]
+x = 0
+y = 1
+
+# T - Smart session manager
+[[keyboard.bindings]]
+chars = "\u0002T"
+key = "K"
+mods = "Command"
+
+# Move up a pane
+[[keyboard.bindings]]
+chars = "\u0002\u001B[A"
+key = "K"
+mods = "Command|Shift"
+
+# Move down a pane
+[[keyboard.bindings]]
+chars = "\u0002\u001B[B"
+key = "J"
+mods = "Command|Shift"
+
+# Move left a pane
+[[keyboard.bindings]]
+chars = "\u0002\u001B[D"
+key = "H"
+mods = "Command|Shift"
+
+# Move right a pane
+[[keyboard.bindings]]
+chars = "\u0002\u001B[C"
+key = "L"
+mods = "Command|Shift"
+
+# Move to next window
+[[keyboard.bindings]]
+chars = "\u0002n"
+key = "Comma"
+mods = "Command"
+
+# Move to prev window
+[[keyboard.bindings]]
+chars = "\u0002p"
+key = "Period"
+mods = "Command"
+
+# New Window
+[[keyboard.bindings]]
+chars = "\u0002c"
+key = "T"
+mods = "Command"
+
+# Close Window
+[[keyboard.bindings]]
+chars = "\u0002x"
+key = "W"
+mods = "Command"
+
+# Split horizontally
+[[keyboard.bindings]]
+chars = "\u0002\""
+key = "E"
+mods = "Command"
+
+# Split veritcally
+[[keyboard.bindings]]
+chars = "\u0002%"
+key = "E"
+mods = "Command|Shift"
+
+# gh dash
+[[keyboard.bindings]]
+chars = "\u0002G"
+key = "G"
+mods = "Command"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 1
+
+[window.padding]
+x = 18
+y = 16

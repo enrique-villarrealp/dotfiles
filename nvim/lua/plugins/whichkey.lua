@@ -4,6 +4,9 @@ local register = function()
     f = {
       name = "file",
     },
+    f = {
+      name = "Harpoon",
+    },
     w = {
       name = "window",
     },

@@ -49,6 +49,11 @@ local config = function()
     on_attach = on_attach,
   })
 
+  lspconfig.marksman.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+
   local flake8 = require("efmls-configs.linters.flake8")
   local eslintd = require("efmls-configs.linters.eslint_d")
   local black = require("efmls-configs.formatters.black")
@@ -69,7 +74,6 @@ local config = function()
       "sh",
       "svelte",
       "vue",
-      "markdown",
       "docker",
       "solidity",
     },
@@ -87,7 +91,7 @@ local config = function()
         json = { eslintd, fixjson },
         jsonc = { eslintd, fixjson },
         sh = { shellcheck, shfmt },
-        markdown = { alex, prettierd },
+        -- markdown = { alex, prettierd },
         docker = { hadolint, prettierd },
       },
     },

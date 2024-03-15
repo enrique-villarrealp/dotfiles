@@ -55,6 +55,7 @@ keymap.set("n", "<leader>lpi", "<cmd>PyrightOrganizeImports<cr>", { desc = "Orga
 keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>", { desc = "Find references" })
 keymap.set("n", "<leader>fd", "<cmd>Lspsaga peek_definition<cr>", { desc = "Peek definition" })
 keymap.set("n", "<leader>fD", "<cmd>Lspsaga goto_definition<cr>", { desc = "Go to definition" })
+keymap.set("n", "gD", "<cmd>Lspsaga goto_definition<cr>", { desc = "Go to definition" })
 keymap.set("n", "<leader>ln", "<cmd>Lspsaga rename<cr>", { desc = "Rename symbol" })
 keymap.set("n", "K", "<cmd>Lspsaga hover_doc<cr>", { desc = "Show documentation" })
 keymap.set("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "Find symbols in file" })

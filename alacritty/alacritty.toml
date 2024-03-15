@@ -37,7 +37,7 @@ background = "#0e1415"
 foreground = "#cecece"
 
 [font]
-size = 16
+size = 17
 
 [font.bold]
 style = "Bold"

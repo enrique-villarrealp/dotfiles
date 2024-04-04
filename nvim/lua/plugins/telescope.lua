@@ -1,11 +1,32 @@
 local keymap = vim.keymap
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "TelescopeResults",
+  callback = function(ctx)
+    vim.api.nvim_buf_call(ctx.buf, function()
+      vim.fn.matchadd("TelescopeParent", "\t\t.*$")
+      vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
+    end)
+  end,
+})
+
+local function formattedName(_, path)
+  local tail = vim.fs.basename(path)
+  local parent = vim.fs.dirname(path)
+  if parent == "." then
+    return tail
+  end
+  return string.format("%s\t\t%s", tail, parent)
+end
+
 local config = function()
   local telescope = require("telescope")
   local actions = require("telescope.actions")
 
   telescope.setup({
+    file_ignore_patterns = { "%.git/." },
     defaults = {
+      sorting_strategy = "descending",
       mappings = {
         i = {
           ["<C-j>"] = "move_selection_next",
@@ -14,11 +35,20 @@ local config = function()
       },
     },
 
+
+
     pickers = {
       find_files = {
-        theme = "dropdown",
+        -- theme = "dropdown",
         previewer = false,
         hidden = true,
+        sorting_strategy='ascending',
+        path_display = formattedName,
+        layout_config = {
+          height = 0.4,
+          prompt_position = "top",
+          preview_cutoff = 120,
+        },
         mappings = {
           i = {
             -- These are Opt-? and Opt-- respectively
@@ -35,6 +65,11 @@ local config = function()
       live_grep = {
         theme = "dropdown",
         previewer = true,
+        layout_config = {
+          height = 0.4,
+          prompt_position = "top",
+          preview_cutoff = 120,
+        },
       },
       git_branches = {
         mappings = {
@@ -46,6 +81,21 @@ local config = function()
       buffers = {
         theme = "dropdown",
         previewer = false,
+        path_display = formattedName,
+        sorting_strategy='descending',
+        layout_config = {
+          height = 0.4,
+          prompt_position = "top",
+          preview_cutoff = 120,
+        },
+        mappings = {
+          i = {
+            ["<c-d>"] = actions.delete_buffer,
+          },
+          n = {
+            ["<c-d>"] = actions.delete_buffer,
+          },
+        },
       }
     },
   })

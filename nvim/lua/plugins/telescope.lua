@@ -35,8 +35,6 @@ local config = function()
       },
     },
 
-
-
     pickers = {
       find_files = {
         previewer = false,
@@ -97,7 +95,7 @@ local config = function()
       }
     },
   })
-  
+
   require("telescope").load_extension("advanced_git_search")
   require("telescope").load_extension("harpoon")
 
@@ -107,10 +105,10 @@ return {
   "nvim-telescope/telescope.nvim",
   version = "0.1.*",
   lazy = false,
-  dependencies = { 
+  dependencies = {
     "nvim-lua/plenary.nvim",
-      { 
-        "nvim-telescope/telescope-live-grep-args.nvim" ,
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
         version = "^1.0.0",
     },
   },

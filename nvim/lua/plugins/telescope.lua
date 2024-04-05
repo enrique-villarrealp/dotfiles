@@ -39,7 +39,6 @@ local config = function()
 
     pickers = {
       find_files = {
-        -- theme = "dropdown",
         previewer = false,
         hidden = true,
         sorting_strategy='ascending',
@@ -79,10 +78,9 @@ local config = function()
         }
       },
       buffers = {
-        theme = "dropdown",
         previewer = false,
         path_display = formattedName,
-        sorting_strategy='descending',
+        sorting_strategy='ascending',
         layout_config = {
           height = 0.4,
           prompt_position = "top",

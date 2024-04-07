@@ -3,6 +3,8 @@ local config = function ()
   local harpoon = require("harpoon.mark")
 
   theme.normal.c.bg = nil
+  theme.visual.c.bg = nil
+  theme.insert.c.bg = nil
 
   local function harpoon_component()
     local total_marks = harpoon.get_length()

@@ -1,0 +1,17 @@
+format = """
+$username\
+$hostname\
+$directory\
+$line_break\
+$character"""
+
+[directory]
+style = "blue"
+
+[directory.substitutions]
+"Repos" = ""
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"

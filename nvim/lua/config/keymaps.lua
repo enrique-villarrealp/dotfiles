@@ -9,6 +9,7 @@ keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
 -- windows
 keymap.set("n", "<leader>ww", "<C-W>p", { desc = "Other window", remap = true })
 keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window", remap = true })
+keymap.set("n", "<leader>wD", ":on<CR>", { desc = "Delete window", remap = true })
 keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window below", remap = true })
 keymap.set("n", "<leader>/", "<C-W>v", { desc = "Split window right", remap = true })
 keymap.set("n", "<leader>wh", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
@@ -44,10 +45,6 @@ keymap.set("n", "<leader>gi", "<cmd>AdvancedGitSearch<cr>", { desc = "Advanced G
 
 -- Buffers
 keymap.set("n", "<leader>,", "<cmd>Telescope buffers<cr>", { desc = "List buffers" })
-keymap.set("n", "<leader>p", "<cmd>BufferLinePick<cr>", { desc = "Pick buffers" })
-keymap.set("n", "<leader>bO", "<cmd>BufferLineCloseOthers<cr>", { desc = "Delete other buffers" })
-keymap.set("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", { desc = "Pin buffer" })
-keymap.set("n", "<leader>bP", "<cmd>BufferLineGroupClose ungrouped<cr>", { desc = "Delete non-pinned buffers" })
 
 -- LSP Stuff
 keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<cr>", { desc = "Code actions" })

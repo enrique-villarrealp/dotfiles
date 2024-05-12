@@ -45,6 +45,7 @@ keymap.set("n", "<leader>gi", "<cmd>AdvancedGitSearch<cr>", { desc = "Advanced G
 
 -- Buffers
 keymap.set("n", "<leader>,", "<cmd>Telescope buffers<cr>", { desc = "List buffers" })
+keymap.set("n", "<leader>bf","<cmd>Format<cr>", { desc = "Format current buffer" })
 
 -- LSP Stuff
 keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<cr>", { desc = "Code actions" })

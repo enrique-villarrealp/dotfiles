@@ -11,6 +11,7 @@ return {
     },
     additions = {
       { "production", "development", "test", "sandbox" },
+      { "prod", "dev", "local", "sandbox" },
       { "let", "const" },
       { "start", "end" },
       { "before", "after" },
@@ -19,7 +20,6 @@ return {
       { "left", "right" },
       { "is", "are" },
       { "FULL", "REPLACE_PARTITION" },
-      { "-", "_" },
     },
   },
 }

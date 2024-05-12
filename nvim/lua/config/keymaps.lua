@@ -71,3 +71,6 @@ keymap.set("n", "<leader>5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", {
 
 -- Zen Mode
 keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "Toggle Zen Mode" })
+--
+-- Obsidian
+keymap.set("n", "<leader>on", "<cmd>ObsidianTemplate note<cr>", { desc = "Apply Obsidian note template" })

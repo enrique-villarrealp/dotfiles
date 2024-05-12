@@ -22,6 +22,9 @@ local register = function()
     s = {
       name = "search",
     },
+    o = {
+      name = "obsidian",
+    },
   }, { prefix = "<leader>" })
 
   local i = {

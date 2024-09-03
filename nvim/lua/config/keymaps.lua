@@ -31,9 +31,8 @@ keymap.set("n", "<leader>fF", function() builtin.find_files({ cwd = utils.buffer
 keymap.set("n", "<leader>sg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { desc = "Grep" })
 keymap.set("n", "<leader>sG", function() builtin.live_grep({ cwd = utils.buffer_dir() }) end, { desc = "Grep (cwd)" })
 keymap.set("n", "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Find in Buffer" })
-keymap.set("n", "<leader>sr", function() require("spectre").open() end, { desc = "Replace in files (spectre)" })
-keymap.set("n", "<leader>sr", function() require("spectre").open() end, { desc = "Replace in files (spectre)" })
-keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {desc = "Search current word"})
+keymap.set('n', '<leader>sr', '<cmd>GrugFar<CR>', {desc = "Search current word"})
+keymap.set('n', '<leader>sw', "<cmd>luarequire('grug-far').open({ prefills = { search = vim.fn.expand('<cword>'), paths = vim.fn.expand('%') } })<CR>", {desc = "Search current word"})
 
 -- Git
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Branches" })

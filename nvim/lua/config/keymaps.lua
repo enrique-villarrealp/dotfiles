@@ -32,7 +32,7 @@ keymap.set("n", "<leader>sg", "<cmd>lua require('telescope').extensions.live_gre
 keymap.set("n", "<leader>sG", function() builtin.live_grep({ cwd = utils.buffer_dir() }) end, { desc = "Grep (cwd)" })
 keymap.set("n", "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Find in Buffer" })
 keymap.set('n', '<leader>sr', '<cmd>GrugFar<CR>', {desc = "Search current word"})
-keymap.set('n', '<leader>sw', "<cmd>luarequire('grug-far').open({ prefills = { search = vim.fn.expand('<cword>'), paths = vim.fn.expand('%') } })<CR>", {desc = "Search current word"})
+keymap.set('n', '<leader>sw', "<cmd>lua require('grug-far').open({ prefills = { search = vim.fn.expand('<cword>'), paths = vim.fn.expand('%') } })<CR>", {desc = "Search current word"})
 
 -- Git
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Branches" })

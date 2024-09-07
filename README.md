@@ -3,14 +3,15 @@ This repo is where I host the secret sauce to make my coworkers go "wtf" every t
 
 ## Software
 
+- Window Manager: [Aerospace](https://github.com/nikitabobko/AeroSpace?tab=readme-ov-file)
 - Terminal: [Alacritty](https://alacritty.org/)
-- Font: [Commit Mono](Monaspace)
+- Font: [Fira Code Mono Nerd Font](https://www.nerdfonts.com/)
 - Colors: [catppuccin](https://github.com/catppuccin/catppuccin)
 - Shell: zsh
   - Prompt: [starship](https://starship.rs/)
 - Multiplexer: [tmux](https://github.com/tmux/tmux/wiki)
   - Session manager: [sesh](https://github.com/joshmedeski/sesh)
-- Editor: [Neovim](https://neovim.io)
+- Editor: custom [Neovim](https://neovim.io) config
 
 ## Keyboards
 

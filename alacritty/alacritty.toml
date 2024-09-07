@@ -1,5 +1,9 @@
 live_config_reload = true
 
+[shell]
+program = "/opt/homebrew/bin/tmux"
+args = ["new-session", "-A", "-s", "0"]
+
 [colors.primary]
 background = "#1E1E2E"
 foreground = "#CDD6F4"
@@ -180,7 +184,7 @@ mods = "Command"
 [window]
 decorations = "buttonless"
 dynamic_padding = false
-opacity = 1
+opacity = 0.87
 
 [window.padding]
 x = 18

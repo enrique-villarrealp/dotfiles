@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = ","
 
 local opt = vim.opt
 
@@ -92,3 +92,11 @@ opt.mouse:append("a")
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.modifiable = true
 opt.encoding = "UTF-8"
+
+
+opt.foldcolumn = '0'
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"

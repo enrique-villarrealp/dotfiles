@@ -71,6 +71,51 @@ keymap.set("n", "<leader>5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", {
 
 -- Zen Mode
 keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "Toggle Zen Mode" })
---
--- Obsidian
+
+-- Obsidian / Markdown
 keymap.set("n", "<leader>on", "<cmd>ObsidianTemplate note<cr>", { desc = "Apply Obsidian note template" })
+keymap.set("n", "<CR>", function()
+  -- Get the current line number
+  local line = vim.fn.line(".")
+  -- Get the fold level of the current line
+  local foldlevel = vim.fn.foldlevel(line)
+  if foldlevel == 0 then
+    vim.notify("No fold found", vim.log.levels.INFO)
+  else
+    vim.cmd("normal! za")
+  end
+end, { desc = "[P]Toggle fold" })
+
+-- Search UP for a markdown header
+-- Make sure to follow proper markdown convention, and you have a single H1
+-- heading at the very top of the file
+-- This will only search for H2 headings and above
+vim.keymap.set("n", "gk", function()
+  -- `?` - Start a search backwards from the current cursor position.
+  -- `^` - Match the beginning of a line.
+  -- `##` - Match 2 ## symbols
+  -- `\\+` - Match one or more occurrences of prev element (#)
+  -- `\\s` - Match exactly one whitespace character following the hashes
+  -- `.*` - Match any characters (except newline) following the space
+  -- `$` - Match extends to end of line
+  vim.cmd("silent! ?^##\\+\\s.*$")
+  -- Clear the search highlight
+  vim.cmd("nohlsearch")
+end, { desc = "Go to previous markdown header" })
+
+-- Search DOWN for a markdown header
+-- Make sure to follow proper markdown convention, and you have a single H1
+-- heading at the very top of the file
+-- This will only search for H2 headings and above
+vim.keymap.set("n", "gj", function()
+  -- `/` - Start a search forwards from the current cursor position.
+  -- `^` - Match the beginning of a line.
+  -- `##` - Match 2 ## symbols
+  -- `\\+` - Match one or more occurrences of prev element (#)
+  -- `\\s` - Match exactly one whitespace character following the hashes
+  -- `.*` - Match any characters (except newline) following the space
+  -- `$` - Match extends to end of line
+  vim.cmd("silent! /^##\\+\\s.*$")
+  -- Clear the search highlight
+  vim.cmd("nohlsearch")
+end, { desc = "Go to next markdown header" })

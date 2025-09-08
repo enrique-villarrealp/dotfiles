@@ -119,3 +119,31 @@ vim.keymap.set("n", "gj", function()
   -- Clear the search highlight
   vim.cmd("nohlsearch")
 end, { desc = "Go to next markdown header" })
+
+
+
+
+-- Custom function (Gen AI hoho) to surround line-wise in visual mode
+function SurroundLinesWithCustomDelimiter()
+    -- Prompt the user for a delimiter
+    local delimiter = vim.fn.input("Enter the delimiter: ")
+
+    -- If no delimiter is provided, exit the function
+    if delimiter == "" then
+        print("No delimiter entered. Aborting.")
+        return
+    end
+
+    -- Get the start and end lines of the visual selection
+    local start_line, end_line = vim.fn.line("'<"), vim.fn.line("'>")
+
+    -- Iterate over each selected line
+    for line = start_line, end_line do
+        local content = vim.fn.getline(line)
+        -- Surround the line with the chosen delimiter
+        vim.fn.setline(line, delimiter .. content .. delimiter)
+    end
+end
+
+-- Map the function to a keybinding (e.g., `<leader>"`)
+keymap.set('v', '<leader>s', ':lua SurroundLinesWithCustomDelimiter()<CR>', { noremap = true, silent = true })
